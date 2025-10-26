@@ -1,8 +1,13 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Search, Heart } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Search, Heart, ShoppingCart, Package } from "lucide-react";
 
-export const Navbar = () => {
+interface NavbarProps {
+  cartCount?: number;
+}
+
+export const Navbar = ({ cartCount = 0 }: NavbarProps) => {
   const location = useLocation();
   
   const isActive = (path: string) => location.pathname === path;
@@ -39,6 +44,35 @@ export const Navbar = () => {
             <Link to="/my-list">
               <Heart className="w-4 h-4 mr-2" />
               MY LIST
+            </Link>
+          </Button>
+
+          <Button
+            variant="ghost"
+            size="sm"
+            className={isActive("/order-status") ? "text-primary" : ""}
+            asChild
+          >
+            <Link to="/order-status">
+              <Package className="w-4 h-4 mr-2" />
+              ORDER STATUS
+            </Link>
+          </Button>
+
+          <Button
+            variant="ghost"
+            size="sm"
+            className="relative"
+            asChild
+          >
+            <Link to="/cart">
+              <ShoppingCart className="w-4 h-4 mr-2" />
+              CART
+              {cartCount > 0 && (
+                <Badge className="absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center p-0 bg-gradient-primary">
+                  {cartCount}
+                </Badge>
+              )}
             </Link>
           </Button>
           
