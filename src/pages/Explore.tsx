@@ -9,6 +9,13 @@ import { Search, Star, Clock, MapPin, Plus, Minus } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+import pizzaImg from '@assets/stock_images/realistic_4k_close_u_bce1074c.jpg'
+import sushiImg from '@assets/stock_images/realistic_4k_sushi_p_9f490996.jpg'
+import ramenImg from '@assets/stock_images/realistic_4k_bowl_of_d779278f.jpg'
+import burgerImg from '@assets/stock_images/realistic_4k_gourmet_45d26ccd.jpg'
+import healthyImg from '@assets/stock_images/realistic_4k_healthy_6e85fe65.jpg'
+import carbonaraImg from '@assets/stock_images/realistic_4k_authent_c1fd19ec.jpg'
+
 interface FoodItem {
   id: number;
   name: string;
@@ -29,7 +36,7 @@ const foodItems: FoodItem[] = [
     category: "Italian",
     price: 18.99,
     description: "Creamy pasta with crispy pancetta, parmesan cheese, and farm-fresh eggs. A classic Roman dish made with authentic Italian ingredients.",
-    image: "🍝",
+    image: carbonaraImg,
     rating: 4.8,
     prepTime: "25-30 min",
     restaurant: "Italian Bistro"
@@ -40,7 +47,7 @@ const foodItems: FoodItem[] = [
     category: "Italian",
     price: 16.50,
     description: "Wood-fired pizza with San Marzano tomatoes, fresh mozzarella, basil, and extra virgin olive oil on a perfectly crispy crust.",
-    image: "🍕",
+    image: pizzaImg,
     rating: 4.9,
     prepTime: "20-25 min",
     restaurant: "Pizza Corner"
@@ -51,7 +58,7 @@ const foodItems: FoodItem[] = [
     category: "Italian",
     price: 24.50,
     description: "Arborio rice slow-cooked with wild mushrooms, black truffle oil, and aged parmesan.",
-    image: "🥘",
+    image: pizzaImg,
     rating: 4.9,
     prepTime: "30-35 min",
     restaurant: "Italian Bistro"
@@ -62,7 +69,7 @@ const foodItems: FoodItem[] = [
     category: "Italian",
     price: 26.99,
     description: "Fresh linguine tossed with prawns, mussels, and squid in a spicy tomato garlic sauce.",
-    image: "🍝",
+    image: carbonaraImg,
     rating: 4.7,
     prepTime: "25-30 min",
     restaurant: "Italian Bistro"
@@ -73,7 +80,7 @@ const foodItems: FoodItem[] = [
     category: "Italian",
     price: 19.99,
     description: "Layers of pasta with rich meat sauce, béchamel, and melted cheese. Baked to golden perfection.",
-    image: "🍝",
+    image: carbonaraImg,
     rating: 4.7,
     prepTime: "30-35 min",
     restaurant: "Italian Bistro"
@@ -84,7 +91,7 @@ const foodItems: FoodItem[] = [
     category: "Italian",
     price: 8.99,
     description: "Classic Italian dessert with espresso-soaked ladyfingers, mascarpone cream, and cocoa powder.",
-    image: "🍰",
+    image: carbonaraImg,
     rating: 4.9,
     prepTime: "15 min",
     restaurant: "Italian Bistro"
@@ -97,7 +104,7 @@ const foodItems: FoodItem[] = [
     category: "Japanese",
     price: 28.99,
     description: "Assorted premium sushi including tuna, salmon, yellowtail, and eel. Served with wasabi, ginger, and soy sauce.",
-    image: "🍣",
+    image: sushiImg,
     rating: 4.9,
     prepTime: "20-25 min",
     restaurant: "Sushi Palace"
@@ -108,7 +115,7 @@ const foodItems: FoodItem[] = [
     category: "Japanese",
     price: 32.00,
     description: "Premium sliced Wagyu beef served over Japanese rice with an onsen egg and sweet soy glaze.",
-    image: "🍚",
+    image: sushiImg,
     rating: 5.0,
     prepTime: "15-20 min",
     restaurant: "Sushi Palace"
@@ -119,7 +126,7 @@ const foodItems: FoodItem[] = [
     category: "Japanese",
     price: 12.50,
     description: "Warm matcha cake with a molten center, served with vanilla bean ice cream.",
-    image: "🍰",
+    image: sushiImg,
     rating: 4.8,
     prepTime: "15 min",
     restaurant: "Sushi Palace"
@@ -130,7 +137,7 @@ const foodItems: FoodItem[] = [
     category: "Japanese",
     price: 15.99,
     description: "Rich pork bone broth with tender chashu pork, soft-boiled egg, bamboo shoots, and fresh noodles.",
-    image: "🍜",
+    image: ramenImg,
     rating: 4.8,
     prepTime: "25-30 min",
     restaurant: "Sushi Palace"
@@ -141,7 +148,7 @@ const foodItems: FoodItem[] = [
     category: "Japanese",
     price: 17.50,
     description: "Grilled chicken glazed with homemade teriyaki sauce, served with steamed rice and vegetables.",
-    image: "🍱",
+    image: sushiImg,
     rating: 4.7,
     prepTime: "20-25 min",
     restaurant: "Sushi Palace"
@@ -152,7 +159,7 @@ const foodItems: FoodItem[] = [
     category: "Japanese",
     price: 19.99,
     description: "Crispy light battered shrimp and seasonal vegetables, served with tentsuyu dipping sauce.",
-    image: "🍤",
+    image: sushiImg,
     rating: 4.6,
     prepTime: "20-25 min",
     restaurant: "Sushi Palace"
@@ -165,7 +172,7 @@ const foodItems: FoodItem[] = [
     category: "Chinese",
     price: 14.99,
     description: "Spicy stir-fried chicken with peanuts, vegetables, and chili peppers in a savory sauce.",
-    image: "🥘",
+    image: ramenImg,
     rating: 4.7,
     prepTime: "20-25 min",
     restaurant: "Chinese Dragon"
@@ -176,7 +183,7 @@ const foodItems: FoodItem[] = [
     category: "Chinese",
     price: 15.50,
     description: "Crispy pork pieces tossed in tangy sweet and sour sauce with bell peppers and pineapple.",
-    image: "🥡",
+    image: ramenImg,
     rating: 4.6,
     prepTime: "25-30 min",
     restaurant: "Chinese Dragon"
@@ -187,7 +194,7 @@ const foodItems: FoodItem[] = [
     category: "Chinese",
     price: 18.99,
     description: "Assorted steamed dumplings including siu mai, har gow, and char siu bao. Perfect for sharing.",
-    image: "🥟",
+    image: ramenImg,
     rating: 4.8,
     prepTime: "20-25 min",
     restaurant: "Chinese Dragon"
@@ -198,7 +205,7 @@ const foodItems: FoodItem[] = [
     category: "Chinese",
     price: 13.99,
     description: "Stir-fried noodles with vegetables, chicken, and savory sauce. A classic Chinese favorite.",
-    image: "🍜",
+    image: ramenImg,
     rating: 4.5,
     prepTime: "20-25 min",
     restaurant: "Chinese Dragon"
@@ -211,7 +218,7 @@ const foodItems: FoodItem[] = [
     category: "Fast Food",
     price: 12.99,
     description: "Juicy beef patty with melted cheddar, lettuce, tomato, pickles, and special sauce on a toasted bun.",
-    image: "🍔",
+    image: burgerImg,
     rating: 4.6,
     prepTime: "15-20 min",
     restaurant: "Burger House"
@@ -222,7 +229,7 @@ const foodItems: FoodItem[] = [
     category: "Fast Food",
     price: 11.99,
     description: "Golden fried chicken wings tossed in your choice of BBQ, buffalo, or honey garlic sauce.",
-    image: "🍗",
+    image: burgerImg,
     rating: 4.7,
     prepTime: "20-25 min",
     restaurant: "Burger House"
@@ -233,7 +240,7 @@ const foodItems: FoodItem[] = [
     category: "Fast Food",
     price: 8.99,
     description: "Crispy fries topped with melted cheese, bacon bits, jalapeños, and sour cream.",
-    image: "🍟",
+    image: burgerImg,
     rating: 4.5,
     prepTime: "15-20 min",
     restaurant: "Burger House"
@@ -244,7 +251,7 @@ const foodItems: FoodItem[] = [
     category: "Fast Food",
     price: 9.99,
     description: "Tender chicken breast pieces in a crispy golden coating. Served with your choice of dipping sauce.",
-    image: "🍗",
+    image: burgerImg,
     rating: 4.4,
     prepTime: "15-20 min",
     restaurant: "Burger House"
@@ -257,7 +264,7 @@ const foodItems: FoodItem[] = [
     category: "Healthy",
     price: 14.99,
     description: "Quinoa base with roasted vegetables, chickpeas, avocado, and tahini dressing. Packed with nutrients.",
-    image: "🥗",
+    image: healthyImg,
     rating: 4.8,
     prepTime: "20-25 min",
     restaurant: "Green Kitchen"
@@ -268,7 +275,7 @@ const foodItems: FoodItem[] = [
     category: "Healthy",
     price: 19.99,
     description: "Fresh Atlantic salmon over mixed greens with cherry tomatoes, cucumber, and lemon vinaigrette.",
-    image: "🥗",
+    image: healthyImg,
     rating: 4.9,
     prepTime: "20-25 min",
     restaurant: "Green Kitchen"
@@ -279,7 +286,7 @@ const foodItems: FoodItem[] = [
     category: "Healthy",
     price: 12.99,
     description: "Organic acai blended with banana and berries, topped with granola, fresh fruit, and honey.",
-    image: "🥣",
+    image: healthyImg,
     rating: 4.7,
     prepTime: "15-20 min",
     restaurant: "Green Kitchen"
@@ -290,7 +297,7 @@ const foodItems: FoodItem[] = [
     category: "Healthy",
     price: 8.99,
     description: "Blend of banana, peanut butter, protein powder, almond milk, and spinach. Perfect post-workout drink.",
-    image: "🥤",
+    image: healthyImg,
     rating: 4.6,
     prepTime: "10-15 min",
     restaurant: "Green Kitchen"
@@ -400,9 +407,13 @@ const Explore = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredItems.map((item) => (
             <Card key={item.id} className="overflow-hidden hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/50">
-              <div className="aspect-video bg-gradient-to-br from-orange-100 to-orange-50 flex items-center justify-center text-8xl relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/10" />
-                <span className="relative z-10 drop-shadow-lg">{item.image}</span>
+              <div className="aspect-video bg-muted flex items-center justify-center relative overflow-hidden">
+                <img 
+                  src={item.image} 
+                  alt={item.name}
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
               </div>
               <div className="p-5">
                 <div className="flex items-start justify-between mb-2">

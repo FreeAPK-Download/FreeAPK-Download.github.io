@@ -10,6 +10,13 @@ import heroImage from "@/assets/hero-restaurant.jpg";
 import insiderCard from "@/assets/insider-card.jpg";
 import corporateFood from "@/assets/corporate-food.jpg";
 
+import pizzaImg from '@assets/stock_images/realistic_4k_close_u_bce1074c.jpg'
+import sushiImg from '@assets/stock_images/realistic_4k_sushi_p_9f490996.jpg'
+import ramenImg from '@assets/stock_images/realistic_4k_bowl_of_d779278f.jpg'
+import burgerImg from '@assets/stock_images/realistic_4k_gourmet_45d26ccd.jpg'
+import healthyImg from '@assets/stock_images/realistic_4k_healthy_6e85fe65.jpg'
+import carbonaraImg from '@assets/stock_images/realistic_4k_authent_c1fd19ec.jpg'
+
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -177,26 +184,33 @@ const Index = () => {
         <h2 className="text-3xl font-bold mb-8 text-center">Popular Cuisines</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {[
-              { name: "Japanese", emoji: "🍱", description: "Fresh sushi, ramen, and traditional Japanese delicacies." },
-              { name: "Chinese", emoji: "🥢", description: "Authentic Cantonese, Szechuan, and local Chinese favorites." },
-              { name: "Italian", emoji: "🍝", description: "Hand-crafted pasta, wood-fired pizzas, and fine Italian wines." },
-              { name: "Indian", emoji: "🍛", description: "Rich curries, tandoori specialties, and aromatic spices." },
-              { name: "Thai", emoji: "🍜", description: "Bold flavors, spicy stir-fries, and classic Pad Thai." },
-              { name: "Korean", emoji: "🍲", description: "Bibimbap, Korean BBQ, and comforting stews." },
-              { name: "Western", emoji: "🍔", description: "Juicy burgers, steaks, and classic American comfort food." },
-              { name: "Desserts", emoji: "🍰", description: "Sweet treats, artisanal cakes, and gourmet pastries." },
-              { name: "Healthy", emoji: "🥗", description: "Nutritious bowls, fresh salads, and organic options." },
-              { name: "Fast Food", emoji: "🍕", description: "Quick bites, pizzas, and tasty on-the-go meals." },
-              { name: "Seafood", emoji: "🦐", description: "Fresh catch of the day and premium seafood platters." },
-              { name: "Vegetarian", emoji: "🥬", description: "Delicious plant-based meals and creative veggie dishes." },
+              { name: "Japanese", image: sushiImg, description: "Fresh sushi, ramen, and traditional Japanese delicacies." },
+              { name: "Chinese", image: ramenImg, description: "Authentic Cantonese, Szechuan, and local Chinese favorites." },
+              { name: "Italian", image: pizzaImg, description: "Hand-crafted pasta, wood-fired pizzas, and fine Italian wines." },
+              { name: "Indian", image: carbonaraImg, description: "Rich curries, tandoori specialties, and aromatic spices." },
+              { name: "Thai", image: ramenImg, description: "Bold flavors, spicy stir-fries, and classic Pad Thai." },
+              { name: "Korean", image: sushiImg, description: "Bibimbap, Korean BBQ, and comforting stews." },
+              { name: "Western", image: burgerImg, description: "Juicy burgers, steaks, and classic American comfort food." },
+              { name: "Desserts", image: carbonaraImg, description: "Sweet treats, artisanal cakes, and gourmet pastries." },
+              { name: "Healthy", image: healthyImg, description: "Nutritious bowls, fresh salads, and organic options." },
+              { name: "Fast Food", image: burgerImg, description: "Quick bites, pizzas, and tasty on-the-go meals." },
+              { name: "Seafood", image: sushiImg, description: "Fresh catch of the day and premium seafood platters." },
+              { name: "Vegetarian", image: healthyImg, description: "Delicious plant-based meals and creative veggie dishes." },
             ].map((cuisine) => (
               <Link key={cuisine.name} to="/explore">
-                <Card className="p-6 text-center hover:shadow-lg transition-shadow cursor-pointer group">
-                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform">
-                    {cuisine.emoji}
+                <Card className="p-0 overflow-hidden text-center hover:shadow-lg transition-shadow cursor-pointer group">
+                  <div className="h-40 relative">
+                    <img 
+                      src={cuisine.image} 
+                      alt={cuisine.name}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-black/20" />
                   </div>
-                  <p className="font-semibold mb-1">{cuisine.name}</p>
-                  <p className="text-xs text-muted-foreground">{cuisine.description}</p>
+                  <div className="p-4">
+                    <p className="font-semibold mb-1">{cuisine.name}</p>
+                    <p className="text-xs text-muted-foreground line-clamp-2">{cuisine.description}</p>
+                  </div>
                 </Card>
               </Link>
             ))}
