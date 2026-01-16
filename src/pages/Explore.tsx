@@ -202,6 +202,28 @@ const foodItems: FoodItem[] = [
     restaurant: "Chinese Dragon"
   },
   {
+    id: 25,
+    name: "Butter Chicken",
+    category: "Indian",
+    price: 22.50,
+    description: "Tender chicken in a rich tomato and butter sauce, served with garlic naan.",
+    image: indianCurryImg,
+    rating: 4.9,
+    prepTime: "25-30 min",
+    restaurant: "Spice Kingdom"
+  },
+  {
+    id: 26,
+    name: "Vegetable Biryani",
+    category: "Indian",
+    price: 18.99,
+    description: "Fragrant basmati rice cooked with seasonal vegetables and aromatic spices.",
+    image: indianCurryImg,
+    rating: 4.8,
+    prepTime: "30-35 min",
+    restaurant: "Spice Kingdom"
+  },
+  {
     id: 12,
     name: "Chow Mein",
     category: "Chinese",
@@ -441,10 +463,15 @@ const Explore = () => {
                     <Clock className="w-4 h-4" />
                     <span>{item.prepTime}</span>
                   </div>
-                  <div className="flex items-center gap-1">
-                    <MapPin className="w-4 h-4" />
-                    <span className="text-xs">{item.restaurant}</span>
-                  </div>
+                </div>
+
+                <div className="mb-4">
+                  <Link 
+                    to={`/recipe/${item.id}`} 
+                    className="text-primary hover:underline text-sm font-semibold flex items-center gap-1"
+                  >
+                    View Recipe & Ingredients <Plus className="w-3 h-3" />
+                  </Link>
                 </div>
 
                 {cart[item.id] ? (
