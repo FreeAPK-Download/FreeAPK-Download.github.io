@@ -18,14 +18,13 @@ const About = () => {
         <Card className="p-8 mb-8">
           <h2 className="text-2xl font-bold mb-4">Our Story</h2>
           <p className="text-muted-foreground mb-4">
-            Founded in Singapore, OddleEats has grown to become the leading food discovery and 
-            delivery platform, serving thousands of customers daily. We believe that great food 
-            should be accessible to everyone, whether you're ordering delivery, picking up, or 
-            making a reservation.
+            Founded in the heart of Singapore, OddleEats began as a small initiative to help local restaurants reach more customers through digital innovation. Over the years, we have evolved into a comprehensive food discovery ecosystem that bridges the gap between passionate chefs and food enthusiasts. Our journey is driven by a deep love for Singapore's diverse culinary landscape and a commitment to excellence in every delivery.
+          </p>
+          <p className="text-muted-foreground mb-4">
+            Today, we are proud to be a trusted partner for over 1,500 establishments, ranging from neighborhood gems to Michelin-starred restaurants. We have served millions of meals, each one representing a connection made and a story shared over the dinner table. Our platform is designed with both the diner and the restaurateur in mind, ensuring a seamless experience from browsing to the first bite.
           </p>
           <p className="text-muted-foreground">
-            With over 1,500 restaurant partners, we're committed to providing the best selection 
-            and service to our customers while supporting local businesses.
+            As we look to the future, we remain dedicated to our core mission of empowering the F&B industry through technology while providing our community with unparalleled access to quality dining experiences. Thank you for being part of our story and letting us be part of yours.
           </p>
         </Card>
 

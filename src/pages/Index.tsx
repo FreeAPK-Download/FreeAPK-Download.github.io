@@ -176,29 +176,30 @@ const Index = () => {
       <section className="py-16 container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-8 text-center">Popular Cuisines</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-          {[
-            { name: "Japanese", emoji: "🍱" },
-            { name: "Chinese", emoji: "🥢" },
-            { name: "Italian", emoji: "🍝" },
-            { name: "Indian", emoji: "🍛" },
-            { name: "Thai", emoji: "🍜" },
-            { name: "Korean", emoji: "🍲" },
-            { name: "Western", emoji: "🍔" },
-            { name: "Desserts", emoji: "🍰" },
-            { name: "Healthy", emoji: "🥗" },
-            { name: "Fast Food", emoji: "🍕" },
-            { name: "Seafood", emoji: "🦐" },
-            { name: "Vegetarian", emoji: "🥬" },
-          ].map((cuisine) => (
-            <Link key={cuisine.name} to="/explore">
-              <Card className="p-6 text-center hover:shadow-lg transition-shadow cursor-pointer group">
-                <div className="text-4xl mb-2 group-hover:scale-110 transition-transform">
-                  {cuisine.emoji}
-                </div>
-                <p className="font-semibold">{cuisine.name}</p>
-              </Card>
-            </Link>
-          ))}
+            {[
+              { name: "Japanese", emoji: "🍱", description: "Fresh sushi, ramen, and traditional Japanese delicacies." },
+              { name: "Chinese", emoji: "🥢", description: "Authentic Cantonese, Szechuan, and local Chinese favorites." },
+              { name: "Italian", emoji: "🍝", description: "Hand-crafted pasta, wood-fired pizzas, and fine Italian wines." },
+              { name: "Indian", emoji: "🍛", description: "Rich curries, tandoori specialties, and aromatic spices." },
+              { name: "Thai", emoji: "🍜", description: "Bold flavors, spicy stir-fries, and classic Pad Thai." },
+              { name: "Korean", emoji: "🍲", description: "Bibimbap, Korean BBQ, and comforting stews." },
+              { name: "Western", emoji: "🍔", description: "Juicy burgers, steaks, and classic American comfort food." },
+              { name: "Desserts", emoji: "🍰", description: "Sweet treats, artisanal cakes, and gourmet pastries." },
+              { name: "Healthy", emoji: "🥗", description: "Nutritious bowls, fresh salads, and organic options." },
+              { name: "Fast Food", emoji: "🍕", description: "Quick bites, pizzas, and tasty on-the-go meals." },
+              { name: "Seafood", emoji: "🦐", description: "Fresh catch of the day and premium seafood platters." },
+              { name: "Vegetarian", emoji: "🥬", description: "Delicious plant-based meals and creative veggie dishes." },
+            ].map((cuisine) => (
+              <Link key={cuisine.name} to="/explore">
+                <Card className="p-6 text-center hover:shadow-lg transition-shadow cursor-pointer group">
+                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform">
+                    {cuisine.emoji}
+                  </div>
+                  <p className="font-semibold mb-1">{cuisine.name}</p>
+                  <p className="text-xs text-muted-foreground">{cuisine.description}</p>
+                </Card>
+              </Link>
+            ))}
         </div>
       </section>
 
