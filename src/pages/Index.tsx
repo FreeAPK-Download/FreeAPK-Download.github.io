@@ -279,6 +279,52 @@ const Index = () => {
         </div>
       </section>
 
+      {/* App Download Section */}
+      <section className="py-16 container mx-auto px-4 bg-gradient-to-r from-primary/10 to-accent/10 rounded-3xl my-12">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+          <div className="flex-1 space-y-6 text-center md:text-left">
+            <h2 className="text-4xl font-bold leading-tight">Get the OddleEats Mobile App</h2>
+            <p className="text-xl text-muted-foreground">Download the menu delivery order app for the best food discovery experience in Singapore. Order from 1,500+ restaurants on the go.</p>
+            <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+              <Button size="lg" className="bg-black text-white hover:bg-black/90 px-8 py-6 rounded-xl">
+                <div className="flex items-center gap-3">
+                  <div className="text-2xl">📱</div>
+                  <div className="text-left">
+                    <div className="text-[10px] uppercase">Download for</div>
+                    <div className="text-lg font-bold leading-none">Android APK</div>
+                  </div>
+                </div>
+              </Button>
+              <Button size="lg" variant="outline" className="px-8 py-6 rounded-xl border-2">
+                <div className="flex items-center gap-3">
+                  <div className="text-2xl">🍎</div>
+                  <div className="text-left">
+                    <div className="text-[10px] uppercase">Download for</div>
+                    <div className="text-lg font-bold leading-none">iOS App Store</div>
+                  </div>
+                </div>
+              </Button>
+            </div>
+          </div>
+          <div className="flex-1 flex justify-center">
+            <div className="relative w-64 h-[500px] bg-background border-[8px] border-black rounded-[3rem] shadow-2xl overflow-hidden">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-black rounded-b-2xl z-20" />
+              <div className="p-4 space-y-4 pt-10">
+                <div className="h-40 bg-muted rounded-2xl animate-pulse" />
+                <div className="space-y-2">
+                  <div className="h-4 bg-muted rounded w-3/4 animate-pulse" />
+                  <div className="h-4 bg-muted rounded w-1/2 animate-pulse" />
+                </div>
+                <div className="grid grid-cols-2 gap-2">
+                  <div className="h-20 bg-muted rounded-xl animate-pulse" />
+                  <div className="h-20 bg-muted rounded-xl animate-pulse" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section for better SEO and Content Value */}
       <section className="py-16 container mx-auto px-4 bg-background">
         <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>

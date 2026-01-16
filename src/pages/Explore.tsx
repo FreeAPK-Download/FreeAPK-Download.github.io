@@ -46,6 +46,28 @@ const foodItems: FoodItem[] = [
     restaurant: "Pizza Corner"
   },
   {
+    id: 21,
+    name: "Truffle Mushroom Risotto",
+    category: "Italian",
+    price: 24.50,
+    description: "Arborio rice slow-cooked with wild mushrooms, black truffle oil, and aged parmesan.",
+    image: "🥘",
+    rating: 4.9,
+    prepTime: "30-35 min",
+    restaurant: "Italian Bistro"
+  },
+  {
+    id: 22,
+    name: "Seafood Linguine",
+    category: "Italian",
+    price: 26.99,
+    description: "Fresh linguine tossed with prawns, mussels, and squid in a spicy tomato garlic sauce.",
+    image: "🍝",
+    rating: 4.7,
+    prepTime: "25-30 min",
+    restaurant: "Italian Bistro"
+  },
+  {
     id: 3,
     name: "Lasagna Bolognese",
     category: "Italian",
@@ -78,6 +100,28 @@ const foodItems: FoodItem[] = [
     image: "🍣",
     rating: 4.9,
     prepTime: "20-25 min",
+    restaurant: "Sushi Palace"
+  },
+  {
+    id: 23,
+    name: "Wagyu Beef Don",
+    category: "Japanese",
+    price: 32.00,
+    description: "Premium sliced Wagyu beef served over Japanese rice with an onsen egg and sweet soy glaze.",
+    image: "🍚",
+    rating: 5.0,
+    prepTime: "15-20 min",
+    restaurant: "Sushi Palace"
+  },
+  {
+    id: 24,
+    name: "Matcha Lava Cake",
+    category: "Japanese",
+    price: 12.50,
+    description: "Warm matcha cake with a molten center, served with vanilla bean ice cream.",
+    image: "🍰",
+    rating: 4.8,
+    prepTime: "15 min",
     restaurant: "Sushi Palace"
   },
   {
