@@ -279,6 +279,25 @@ const Index = () => {
         </div>
       </section>
 
+      {/* FAQ Section for better SEO and Content Value */}
+      <section className="py-16 container mx-auto px-4 bg-background">
+        <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+        <div className="max-w-3xl mx-auto space-y-6">
+          <Card className="p-6">
+            <h3 className="text-xl font-bold mb-2">How does OddleEats work?</h3>
+            <p className="text-muted-foreground">OddleEats is a comprehensive food discovery platform that connects you with over 1,500 restaurants in Singapore. You can browse menus, place orders for delivery or pickup, and even make table reservations all in one place.</p>
+          </Card>
+          <Card className="p-6">
+            <h3 className="text-xl font-bold mb-2">What are the delivery areas?</h3>
+            <p className="text-muted-foreground">We offer island-wide delivery across Singapore. Whether you're in Jurong, Tampines, or the Central Business District, our partner restaurants and delivery fleet ensure your food arrives fresh and on time.</p>
+          </Card>
+          <Card className="p-6">
+            <h3 className="text-xl font-bold mb-2">Are there exclusive rewards for members?</h3>
+            <p className="text-muted-foreground">Yes! By joining our Insider program, you gain access to exclusive dining privileges, earn points on every order, and receive early notifications about new restaurant launches and special promotions.</p>
+          </Card>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );

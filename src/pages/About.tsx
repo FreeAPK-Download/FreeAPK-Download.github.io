@@ -28,6 +28,16 @@ const About = () => {
           </p>
         </Card>
 
+        <Card className="p-8 mb-8">
+          <h2 className="text-2xl font-bold mb-4">Our Commitment to Quality</h2>
+          <p className="text-muted-foreground mb-4">
+            At OddleEats, we don't just list restaurants; we curate experiences. Every partner on our platform undergoes a rigorous selection process to ensure they meet our high standards for food quality, hygiene, and service excellence. We believe that whether you're ordering a quick lunch or a celebratory dinner, you deserve the very best.
+          </p>
+          <p className="text-muted-foreground">
+            Our team works closely with chefs and restaurant owners to ensure that their digital menus accurately reflect the passion and quality found in their physical kitchens. This dedication to detail is what sets OddleEats apart as Singapore's preferred food discovery destination.
+          </p>
+        </Card>
+
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <Card className="p-6 text-center">
             <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
