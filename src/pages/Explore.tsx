@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Search, Star, Clock, MapPin, Plus, Minus } from "lucide-react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 import pizzaImg from '@assets/stock_images/realistic_4k_close_u_bce1074c.jpg'
 import sushiImg from '@assets/stock_images/realistic_4k_sushi_p_9f490996.jpg'
