@@ -16,6 +16,9 @@ import ramenImg from '@assets/stock_images/realistic_4k_bowl_of_d779278f.jpg'
 import burgerImg from '@assets/stock_images/realistic_4k_gourmet_45d26ccd.jpg'
 import healthyImg from '@assets/stock_images/realistic_4k_healthy_6e85fe65.jpg'
 import carbonaraImg from '@assets/stock_images/realistic_4k_authent_c1fd19ec.jpg'
+import sushiParadiseImg from '@assets/stock_images/realistic_4k_close_u_4c52fc0b.jpg'
+import pastaHouseImg from '@assets/stock_images/realistic_4k_steamin_428701b3.jpg'
+import spiceKingdomImg from '@assets/stock_images/realistic_4k_authent_57c85766.jpg'
 
 const Index = () => {
   return (
@@ -258,14 +261,19 @@ const Index = () => {
         <h2 className="text-3xl font-bold mb-8 text-center">Featured Restaurants</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {[
-            { name: "Sushi Paradise", cuisine: "Japanese", rating: 4.8, time: "25-30 min", distance: "1.2 km" },
-            { name: "Pasta House", cuisine: "Italian", rating: 4.7, time: "30-35 min", distance: "2.1 km" },
-            { name: "Spice Kingdom", cuisine: "Indian", rating: 4.9, time: "20-25 min", distance: "0.8 km" },
+            { name: "Sushi Paradise", cuisine: "Japanese", rating: 4.8, time: "25-30 min", distance: "1.2 km", image: sushiParadiseImg },
+            { name: "Pasta House", cuisine: "Italian", rating: 4.7, time: "30-35 min", distance: "2.1 km", image: pastaHouseImg },
+            { name: "Spice Kingdom", cuisine: "Indian", rating: 4.9, time: "20-25 min", distance: "0.8 km", image: spiceKingdomImg },
           ].map((restaurant, index) => (
             <Link key={index} to="/explore">
               <Card className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer group">
-                <div className="aspect-video bg-gradient-primary flex items-center justify-center text-6xl">
-                  🍽️
+                <div className="aspect-video relative overflow-hidden">
+                  <img 
+                    src={restaurant.image} 
+                    alt={restaurant.name}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black/10" />
                 </div>
                 <div className="p-4">
                   <h3 className="text-xl font-bold mb-1 group-hover:text-primary transition-colors">

@@ -15,6 +15,8 @@ import ramenImg from '@assets/stock_images/realistic_4k_bowl_of_d779278f.jpg'
 import burgerImg from '@assets/stock_images/realistic_4k_gourmet_45d26ccd.jpg'
 import healthyImg from '@assets/stock_images/realistic_4k_healthy_6e85fe65.jpg'
 import carbonaraImg from '@assets/stock_images/realistic_4k_authent_c1fd19ec.jpg'
+import dimSumImg from '@assets/stock_images/realistic_4k_assortm_898b4492.jpg'
+import indianCurryImg from '@assets/stock_images/realistic_4k_authent_57c85766.jpg'
 
 interface FoodItem {
   id: number;
@@ -172,7 +174,7 @@ const foodItems: FoodItem[] = [
     category: "Chinese",
     price: 14.99,
     description: "Spicy stir-fried chicken with peanuts, vegetables, and chili peppers in a savory sauce.",
-    image: ramenImg,
+    image: dimSumImg,
     rating: 4.7,
     prepTime: "20-25 min",
     restaurant: "Chinese Dragon"
@@ -183,7 +185,7 @@ const foodItems: FoodItem[] = [
     category: "Chinese",
     price: 15.50,
     description: "Crispy pork pieces tossed in tangy sweet and sour sauce with bell peppers and pineapple.",
-    image: ramenImg,
+    image: dimSumImg,
     rating: 4.6,
     prepTime: "25-30 min",
     restaurant: "Chinese Dragon"
@@ -194,7 +196,7 @@ const foodItems: FoodItem[] = [
     category: "Chinese",
     price: 18.99,
     description: "Assorted steamed dumplings including siu mai, har gow, and char siu bao. Perfect for sharing.",
-    image: ramenImg,
+    image: dimSumImg,
     rating: 4.8,
     prepTime: "20-25 min",
     restaurant: "Chinese Dragon"
@@ -205,7 +207,7 @@ const foodItems: FoodItem[] = [
     category: "Chinese",
     price: 13.99,
     description: "Stir-fried noodles with vegetables, chicken, and savory sauce. A classic Chinese favorite.",
-    image: ramenImg,
+    image: dimSumImg,
     rating: 4.5,
     prepTime: "20-25 min",
     restaurant: "Chinese Dragon"
